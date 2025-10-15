@@ -1,0 +1,162 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_6b1980d942d44313bc52bf722ec89d99
+  created: 1760566643882
+  modified: 1760566643882
+  description: ""
+collection:
+  - url: "{{BASE_URL}}/tasks"
+    name: Criar Nova Tarefa
+    meta:
+      id: req_47cdd5ed4b9e49728879823d91d57a64
+      created: 1760566643898
+      modified: 1760566891819
+      isPrivate: false
+      description: ""
+      sortKey: -1760566643899
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "tarefa 01",
+        	"description": "tarefa 01 descrição"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/tasks"
+    name: Listar Tarefas
+    meta:
+      id: req_0370a03517f64ea89250b73ced871e67
+      created: 1760567049595
+      modified: 1760567055453
+      isPrivate: false
+      description: ""
+      sortKey: -1760566622607
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/tasks/3"
+    name: Atualizar Tarefa
+    meta:
+      id: req_63b1654a8c15490388481edba0bebc41
+      created: 1760567085806
+      modified: 1760567566042
+      isPrivate: false
+      description: ""
+      sortKey: -1760566633253
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "tarefa 01 editada",
+        	"description": "tarefa 07 descrição editada",
+        	"completed": false
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/tasks/3"
+    name: Pesquisar Tarefa
+    meta:
+      id: req_4ca504e6c449452799c2db24aaca74f4
+      created: 1760567162827
+      modified: 1760567574728
+      isPrivate: false
+      description: ""
+      sortKey: -1760566627930
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/tasks/3"
+    name: Deletar Tarefa
+    meta:
+      id: req_a667ee85084c4e28ac196b95c06184a3
+      created: 1760567551492
+      modified: 1760567579648
+      isPrivate: false
+      description: ""
+      sortKey: -1760566625268.5
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_bb21c27d3c1e5905d808e46b7cc5314e6b66dfc3
+    created: 1760566643888
+    modified: 1760566643888
+environments:
+  name: Base Environment
+  meta:
+    id: env_bb21c27d3c1e5905d808e46b7cc5314e6b66dfc3
+    created: 1760566643885
+    modified: 1760566682665
+    isPrivate: false
+  data:
+    BASE_URL: http://127.0.0.1:5000
