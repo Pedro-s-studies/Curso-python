@@ -1,0 +1,82 @@
+type: collection.insomnia.rest/5.0
+name: Python WebSocket
+meta:
+  id: wrk_761af011cec4400baaf0c8a4acf004d3
+  created: 1763666730316
+  modified: 1763666730316
+  description: ""
+collection:
+  - url: "{{ _.BASE_URL }}/payments/pix"
+    name: Create Payment
+    meta:
+      id: req_487ff8308fcc454c826ebf16e944f4fa
+      created: 1763666816681
+      modified: 1763686669936
+      isPrivate: false
+      description: ""
+      sortKey: -1763666816681
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"value": 100.00
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.BASE_URL }}/payments/pix/confirmation"
+    name: Confirm Payment
+    meta:
+      id: req_e6dbc04cf01f495780d59c91abdc2ef2
+      created: 1763686523566
+      modified: 1763686712005
+      isPrivate: false
+      description: ""
+      sortKey: -1762271268170
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"bank_payment_id": "d75f1091-322f-4e42-af21-8d4cf357c9c7",
+        	"value": 100
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_10837541523ada1ae4726760902a0b2407f8fcb1
+    created: 1763666730327
+    modified: 1763666730327
+environments:
+  name: Base Environment
+  meta:
+    id: env_10837541523ada1ae4726760902a0b2407f8fcb1
+    created: 1763666730323
+    modified: 1763666811046
+    isPrivate: false
+  data:
+    BASE_URL: http://127.0.0.1:5000
