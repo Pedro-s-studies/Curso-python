@@ -1,0 +1,163 @@
+type: collection.insomnia.rest/5.0
+name: Python Diet API
+meta:
+  id: wrk_e67663f8ce7b4a178ae061fe8ef2eb79
+  created: 1763984886972
+  modified: 1763984886972
+  description: ""
+collection:
+  - url: "{{BASE_URL}}/diets"
+    name: Criar Nova Dieta
+    meta:
+      id: req_9f08d82765c54baa84b4d9060f1b9ec1
+      created: 1760566643898
+      modified: 1763986853851
+      isPrivate: false
+      description: ""
+      sortKey: -1760566643899
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"name": "Café da Manha 2",
+        	"description": "Vitamina de banana com whey e rosquinha de pão de queijo",
+        	"is_diet": false
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/diets"
+    name: Listar Dietas
+    meta:
+      id: req_2a0cffeb035544e2896d2be40ca905a4
+      created: 1760567049595
+      modified: 1763986145194
+      isPrivate: false
+      description: ""
+      sortKey: -1760566622607
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/diets/1"
+    name: Atualizar Dieta
+    meta:
+      id: req_fd43da78f989473796abe6d2117f3533
+      created: 1760567085806
+      modified: 1763986986753
+      isPrivate: false
+      description: ""
+      sortKey: -1760566633253
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "tarefa 01 editada",
+        	"description": "Bolo de chocolate",
+        	"is_diet": "False"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/diets/{% now 'iso-8601', '' %}"
+    name: Pesquisar Dieta
+    meta:
+      id: req_ebff45eae1c743b98ae5106fed9aa7a9
+      created: 1760567162827
+      modified: 1763987031020
+      isPrivate: false
+      description: ""
+      sortKey: -1760566627930
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASE_URL}}/diets/2"
+    name: Deletar Dieta
+    meta:
+      id: req_0770846519f04ad78200e59998cd301d
+      created: 1760567551492
+      modified: 1763987017454
+      isPrivate: false
+      description: ""
+      sortKey: -1760566625268.5
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e249d79a73b94795bdd7145cdc12480c
+    created: 1760566643888
+    modified: 1760566643888
+environments:
+  name: Base Environment
+  meta:
+    id: env_bb746ecbd5394c7d88924b70b491a1f6
+    created: 1760566643885
+    modified: 1760566682665
+    isPrivate: false
+  data:
+    BASE_URL: http://127.0.0.1:5000
