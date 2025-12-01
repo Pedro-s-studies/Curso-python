@@ -1,0 +1,111 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Design de Código
+meta:
+  id: wrk_2af1f262d40d4bb7a2316c4576b0c573
+  created: 1760875454712
+  modified: 1760875454712
+  description: ""
+collection:
+  - url: "{{BASEURL}}/calculator/1"
+    name: Calculator 1
+    meta:
+      id: req_ba26325f97a64d1eb7fe5944b84016a7
+      created: 1760875719659
+      modified: 1764616793991
+      isPrivate: false
+      description: ""
+      sortKey: -1760875719659
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"number": 3
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASEURL}}/calculator/2"
+    name: Calculator 2
+    meta:
+      id: req_b75afbd71a9d451697ffc73c5a74bb2c
+      created: 1764175721156
+      modified: 1764616788474
+      isPrivate: false
+      description: ""
+      sortKey: -1760851761676
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"numbers": [2.12, 4.62, 1.32, 11.1]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{BASEURL}}/calculator/3"
+    name: Calculator 3
+    meta:
+      id: req_e3a53f6e155c4e1bb1d73dcbcbdcb143
+      created: 1764597540310
+      modified: 1764616813066
+      isPrivate: false
+      description: ""
+      sortKey: -1760839782684.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"numbers": [2, 1, 1, 1, 100]
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_092a3df8c64645a7c9af338480a2be3df09449b8
+    created: 1760875454726
+    modified: 1760875454726
+environments:
+  name: Base Environment
+  meta:
+    id: env_092a3df8c64645a7c9af338480a2be3df09449b8
+    created: 1760875454718
+    modified: 1760875713902
+    isPrivate: false
+  data:
+    BASEURL: http://127.0.0.1:3000
