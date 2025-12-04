@@ -1,0 +1,130 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Mongo DB API
+meta:
+  id: wrk_ce8b613890f94c07a1c8109109b1bffa
+  created: 1764771836737
+  modified: 1764771836737
+  description: ""
+collection:
+  - url: "{{ _.BASE_URL }}/delivery/order"
+    name: New Order
+    meta:
+      id: req_74b92b87065c43ad9184491de69fdb3e
+      created: 1764771843977
+      modified: 1764791517918
+      isPrivate: false
+      description: ""
+      sortKey: -1764771843977
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"data": {
+        		"name": "Pedrinho",
+        		"address": "Rua do limao",
+        		"cupom": false,
+        		"itens": [
+        			{"item": "Refrigerante", "quantidade": 2},
+        			{"item": "Pizza", "quantidade": 3}
+        		]
+        	}
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.BASE_URL }}/delivery/order/:order_id"
+    name: Find Order
+    meta:
+      id: req_5ee0f3292e6d4d0a8471114dd284e168
+      created: 1764852097299
+      modified: 1764852173576
+      isPrivate: false
+      description: ""
+      sortKey: -1764219330329
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: order_id
+        value: 69309171f5814a709ea4e77f
+  - url: "{{ _.BASE_URL }}/delivery/order/:order_id"
+    name: Update Order
+    meta:
+      id: req_1a392da2e10141e8b1c2e78506e5a657
+      created: 1764852275981
+      modified: 1764852327309
+      isPrivate: false
+      description: ""
+      sortKey: -1764495587153
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"data": {
+        		"address": "Rua são paulo"
+        	}
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: order_id
+        value: 69309171f5814a709ea4e77f
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_86fc2723e660fb51593a2da0e372c6bf87c38cd6
+    created: 1764771836746
+    modified: 1764771836746
+environments:
+  name: Base Environment
+  meta:
+    id: env_86fc2723e660fb51593a2da0e372c6bf87c38cd6
+    created: 1764771836741
+    modified: 1764771851952
+    isPrivate: false
+  data:
+    BASE_URL: http://127.0.0.1:3000
