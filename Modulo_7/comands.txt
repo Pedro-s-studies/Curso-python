@@ -1,0 +1,8 @@
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+venv\Scripts\activate
+pip install pylint
+
+pip freeze > requirements.txt # gerar o requirements.txt
+
+pylint --generate-rcfile | out-file -encoding utf8 .pylintrc
