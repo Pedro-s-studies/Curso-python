@@ -1,9 +1,10 @@
 from typing import List
 from sqlalchemy.orm.exc import NoResultFound
 from src.models.sqlite.entities.pets import PetsTable
+from src.models.sqlite.interfaces.pets_repository import PetsRepositoryInterface
 
 
-class PetsRepository:
+class PetsRepository(PetsRepositoryInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
@@ -19,10 +20,9 @@ class PetsRepository:
         with self.__db_connection as database:
             try:
                 (
-                    database.session
-                        .query(PetsTable)
-                        .filter(PetsTable.name == name)
-                        .delete()
+                    database.session.query(PetsTable)
+                    .filter(PetsTable.name == name)
+                    .delete()
                 )
                 database.session.commit()
             except Exception as exception:
